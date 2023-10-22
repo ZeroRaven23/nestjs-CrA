@@ -135,7 +135,7 @@ Os próximos passos para o projeto incluem:
 * IsLogged: Boolean
 
 ### User
-
+```
 * idUser: Int (ID, autoincrement)
 * Email: String (unique)
 * Score: String
@@ -145,3 +145,4 @@ Os próximos passos para o projeto incluem:
 * Projects: Projects (relação um-para-muitos)
 * Communication: Communication (relação um-para-muitos)
 * Login: Login (relação um-para-um)
+```
