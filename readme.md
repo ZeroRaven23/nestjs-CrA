@@ -109,32 +109,42 @@ Os próximos passos para o projeto incluem:
 ├── README.MD
 └── ...
 ```
+
 ## Modelos
 
 ### Feedback
 
+```
 * idFeedback: Int (ID, autoincrement)
 * Message: String
 * Author: String
+```
 
 ### Projects
 
+```
 * idProjects: Int (ID, autoincrement)
 * Project: String
 * Status: String
+```
 
 ### Communication
 
+```
 * idCommunication: Int (ID, autoincrement)
 * Post: String
 * Company: String
+```
 
 ### Login
 
+```
 * idLogin: Int (ID, autoincrement)
 * IsLogged: Boolean
+```
 
 ### User
+
 ```
 * idUser: Int (ID, autoincrement)
 * Email: String (unique)
