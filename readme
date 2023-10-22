@@ -70,3 +70,78 @@ Os próximos passos para o projeto incluem:
 - Implementação das funcionalidades adicionais descritas na seção "Outras ideias de funcionalidades".
 - Melhorias na interface do usuário e na experiência do usuário.
 - Testes e depuração do aplicativo.
+
+## Arquitetura do projeto
+
+```
+├── .vscode
+│   └── ...
+├── prisma
+│   └── schema.prisma
+├── src
+│   ├── config
+│   │   ├── interceptor
+│   │   │   └── ...
+│   │   ├──  middleware
+│   │   │   └── ...
+│   │   ├──  prisma
+│   │   │   └── ...
+│   │   ├──  swagger
+│   │   │   └── ...
+│   │   └── ...
+│   ├── context
+│   │   ├──  controller
+│   │   │   └── ...
+│   │   ├──  entity
+│   │   │   └── ...
+│   │   ├──  service
+│   │   │   └── ...
+│   │   └── ...
+│   ├── util
+│   │  └── ...
+│   ├── view
+│   │  ├──  dto
+│   │  │   └── ...
+│   │  └── interface
+│   │      └── ...
+│   ├── app.module.ts
+│   └── main.ts
+├── README.MD
+└── ...
+```
+## Modelos
+
+### Feedback
+
+* idFeedback: Int (ID, autoincrement)
+* Message: String
+* Author: String
+
+### Projects
+
+* idProjects: Int (ID, autoincrement)
+* Project: String
+* Status: String
+
+### Communication
+
+* idCommunication: Int (ID, autoincrement)
+* Post: String
+* Company: String
+
+### Login
+
+* idLogin: Int (ID, autoincrement)
+* IsLogged: Boolean
+
+### User
+
+* idUser: Int (ID, autoincrement)
+* Email: String (unique)
+* Score: String
+* UUID: String (unique)
+
+* Feedback: Feedback (relação um-para-um)
+* Projects: Projects (relação um-para-muitos)
+* Communication: Communication (relação um-para-muitos)
+* Login: Login (relação um-para-um)
